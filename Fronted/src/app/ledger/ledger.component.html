@@ -1,0 +1,26 @@
+<div class="container">
+    <h1 class="title">Ledger</h1>
+    <table class="ledger-table">
+      <thead>
+        <tr>
+          <th>Account Name</th>
+          <th>Opening Balance</th>
+          <th>Transaction Date</th>
+          <th>Debit Amount</th>
+          <th>Credit Amount</th>
+          <th>Running Balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let entry of ledgerData">
+          <td>{{ entry.AccountName }}</td>
+          <td>{{ entry.OpeningBalance | currency }}</td>
+          <td>{{ entry.TransactionDate | date }}</td>
+          <td>{{ entry.DebitAmount | currency }}</td>
+          <td>{{ entry.CreditAmount | currency }}</td>
+          <td>{{ entry.RunningBalance | currency }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

@@ -1,0 +1,73 @@
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Ledger Table */
+.ledger-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  color: #374151;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Table Headers */
+.ledger-table thead th {
+  background-color: #1e40af;
+  color: white;
+  text-align: left;
+  padding: 1rem;
+  font-weight: 600;
+  border-right: 1px solid #3b82f6;
+}
+
+.ledger-table thead th:last-child {
+  border-right: none;
+}
+
+/* Table Body Rows */
+.ledger-table tbody td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  border-right: 1px solid #f3f4f6;
+}
+
+.ledger-table tbody td:last-child {
+  border-right: none;
+}
+
+/* Zebra striping */
+.ledger-table tbody tr:nth-child(even) {
+  background-color: #f3f4f6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ledger-table {
+    font-size: 0.9rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}
