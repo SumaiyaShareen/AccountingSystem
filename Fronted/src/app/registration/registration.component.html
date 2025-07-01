@@ -1,0 +1,47 @@
+<div class="registration-background">
+<div class="registration-container">
+    <h2>Create Your Account</h2>
+    <form (ngSubmit)="register()">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input 
+          id="username" 
+          [(ngModel)]="username" 
+          name="username" 
+          type="text" 
+          placeholder="Enter your username" 
+          required 
+        />
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input 
+          id="password" 
+          [(ngModel)]="passwordHash" 
+          name="password" 
+          type="password" 
+          placeholder="Create a password" 
+          required 
+        />
+      </div>
+      
+      <div class="form-group">
+        <label for="role">Select Role:</label>
+        <select 
+          id="role" 
+          [(ngModel)]="role" 
+          name="role"
+        >
+          <option value="User">User</option>
+          <option value="Admin">Admin</option>
+          <option value="Accountant">Accountant</option>
+        </select>
+      </div>
+  
+      <button type="submit" class="btn">Register</button>
+      <p *ngIf="message" class="message">{{ message }}</p>
+    </form>
+    <p class="redirect">Already have an account? <a routerLink="/login">Login here</a></p>
+  </div>
+  </div>

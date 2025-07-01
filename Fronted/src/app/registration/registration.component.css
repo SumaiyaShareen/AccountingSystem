@@ -1,0 +1,144 @@
+/* Background wrapper */
+.registration-background {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #f8fafc, #e2e8f0);
+  padding: 2rem;
+  background: 
+    linear-gradient(to bottom, rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+    url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80&fit=max');
+}
+
+/* Form container */
+.registration-container {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  max-width: 460px;
+  width: 100%;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  animation: float 6s ease-in-out infinite;
+  position: relative;
+}
+
+.registration-container h2 {
+  text-align: center;
+  color: #1e293b;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.75rem;
+}
+
+/* Form styling */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #475569;
+  font-weight: 500;
+  font-size: 0.925rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  font-size: 0.95rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+  background-color: #ffffff;
+}
+
+/* Button styling */
+.btn {
+  width: 100%;
+  padding: 0.875rem;
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #4f46e5;
+  transform: translateY(-1px);
+}
+
+/* Message and redirect */
+.message {
+  text-align: center;
+  margin-top: 1rem;
+  color: #dc2626;
+  font-size: 0.9rem;
+}
+
+.redirect {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.redirect a {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.redirect a:hover {
+  color: #4f46e5;
+}
+
+.redirect a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #6366f1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.redirect a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .registration-container {
+    padding: 2rem;
+    animation: none;
+  }
+}
