@@ -1,0 +1,118 @@
+/* Card Styling */
+mat-card {
+  margin: 20px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f3faff, #e3f1ff);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Title Styling */
+mat-card h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #0078d4;
+  margin-bottom: 20px;
+}
+
+/* Table Styling */
+table.mat-elevation-z8 {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Row Styling */
+.mat-header-row {
+  background: #0078d4; /* Professional blue for header */
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+/* Header Cells */
+.mat-header-cell {
+  padding: 10px 15px;
+  text-align: left;
+}
+
+/* Body Rows */
+.mat-row {
+  transition: background-color 0.3s ease;
+}
+
+.mat-row:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.mat-row:nth-child(odd) {
+  background: #ffffff;
+}
+
+.mat-row:hover {
+  background: #e3f2fd; /* Light blue hover effect */
+}
+
+/* Data Cells */
+.mat-cell {
+  padding: 10px 15px;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* Debit and Credit Column Colors */
+.mat-cell:nth-child(2) {
+  color: #008000; /* Green for Debit */
+  font-weight: bold;
+}
+
+.mat-cell:nth-child(3) {
+  color: #ff0000; /* Red for Credit */
+  font-weight: bold;
+}
+
+/* Totals Row */
+table tr:last-child {
+  background: #0056b3; /* Darker blue for totals row */
+  color: #ffffff;
+  font-weight: bold;
+}
+
+table tr:last-child .total-cell {
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+/* Animated Hover Effect */
+.mat-row:hover {
+  transform: scale(1.01);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  mat-card {
+    padding: 10px;
+  }
+
+  mat-card h2 {
+    font-size: 20px;
+  }
+
+  .mat-header-cell, .mat-cell {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  table tr:last-child .total-cell {
+    font-size: 14px;
+  }
+}
