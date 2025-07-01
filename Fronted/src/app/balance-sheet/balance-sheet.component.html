@@ -1,0 +1,73 @@
+<mat-card class="balance-sheet-card">
+    <h2 class="title">Balance Sheet</h2>
+  
+    <!-- Assets Section -->
+    <div class="section">
+      <h3>Assets</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Account Name</th>
+            <th>Balance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let asset of assets">
+            <td>{{ asset.AccountName }}</td>
+            <td>{{ asset.OpeningBalance | currency }}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Total Assets</th>
+            <th>{{ totalAssets | currency }}</th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  
+    <!-- Liabilities Section -->
+    <div class="section">
+      <h3>Liabilities</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Account Name</th>
+            <th>Balance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let liability of liabilities">
+            <td>{{ liability.AccountName }}</td>
+            <td>{{ liability.OpeningBalance | currency }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- Equity Section -->
+    <div class="section">
+      <h3>Equity</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Account Name</th>
+            <th>Balance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let equityItem of equity">
+            <td>{{ equityItem.AccountName }}</td>
+            <td>{{ equityItem.OpeningBalance | currency }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- Total Liabilities and Equity -->
+    <div class="total-summary">
+      <h3>Total Liabilities and Equity</h3>
+      <p>{{ totalLiabilitiesAndEquity | currency }}</p>
+    </div>
+  </mat-card>
+  

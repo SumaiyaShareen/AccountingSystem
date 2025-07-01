@@ -1,0 +1,83 @@
+/* Card styling */
+.balance-sheet-card {
+    margin: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title styling */
+  .title {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Section styling */
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  .section h3 {
+    color: #34495e;
+    font-size: 20px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  thead th {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #dcdde1;
+    color: #2c3e50;
+  }
+  
+  tfoot th {
+    padding: 10px;
+    background-color: #1abc9c;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Total summary styling */
+  .total-summary {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #2c3e50;
+  }
+  
+  .total-summary h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #27ae60;
+  }
+  
+  .total-summary p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2980b9;
+  }
+  
