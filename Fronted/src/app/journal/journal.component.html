@@ -1,0 +1,64 @@
+<div class="container">
+  <h2>Journal Entries</h2>
+
+  <!-- Error message if any -->
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Journal Entry Form -->
+  <div class="form-container">
+    <h3>Add Journal Entry</h3>
+    <form [formGroup]="journalEntryForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="EntryDate">Entry Date:</label>
+        <input id="EntryDate" formControlName="EntryDate" type="date" class="form-control" [class.is-invalid]="journalEntryForm.controls['EntryDate'].invalid && journalEntryForm.controls['EntryDate'].touched">
+      </div>
+
+      <div class="form-group">
+        <label for="Description">Description:</label>
+        <textarea id="Description" formControlName="Description" rows="4" class="form-control" [class.is-invalid]="journalEntryForm.controls['Description'].invalid && journalEntryForm.controls['Description'].touched"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="CreatedBy">Created By:</label>
+        <select id="CreatedBy" formControlName="CreatedBy" class="form-control" [class.is-invalid]="journalEntryForm.controls['CreatedBy'].invalid && journalEntryForm.controls['CreatedBy'].touched">
+          <option value="">Select User</option>
+          <option *ngFor="let user of users" [value]="user.UserId">{{ user.Username }}</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="journalEntryForm.invalid || isLoading">
+        {{ isLoading ? 'Saving...' : 'Add Entry' }}
+      </button>
+    </form>
+  </div>
+
+  <!-- Display existing journal entries -->
+  <div *ngIf="!isLoading && journalEntries.length > 0" class="entries-table">
+    <h3>Existing Journal Entries</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Entry ID</th>
+          <th>Entry Date</th>
+          <th>Description</th>
+          <th>Created By</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let entry of journalEntries">
+          <td>{{ entry.EntryId }}</td>
+          <td>{{ entry.EntryDate | date }}</td>
+          <td>{{ entry.Description }}</td>
+          <td>{{ getCreatedByName(entry.CreatedBy) }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Loading spinner -->
+  <div *ngIf="isLoading" class="loading">
+    <span>Loading...</span>
+  </div>
+</div>
