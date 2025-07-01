@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="header">
+      <h1>Income Statement</h1>
+      <p class="report-date">For the period ending: {{ currentDate }}</p>
+    </div>
+  
+    <div class="statement">
+      <!-- Revenue Section -->
+      <div class="section">
+        <div class="section-title">Revenue</div>
+        <div *ngFor="let account of revenueAccounts" class="row">
+          <span class="label">{{ account.AccountName }}</span>
+          <span class="value">{{ account.OpeningBalance | currency }}</span>
+        </div>
+        <div class="total">
+          Total Revenue: {{ totalRevenue | currency }}
+        </div>
+      </div>
+  
+      <!-- Expenses Section -->
+      <div class="section">
+        <div class="section-title">Expenses</div>
+        <div *ngFor="let account of expenseAccounts" class="row">
+          <span class="label">{{ account.AccountName }}</span>
+          <span class="value">{{ account.OpeningBalance | currency }}</span>
+        </div>
+        <div class="total">
+          Total Expenses: {{ totalExpense | currency }}
+        </div>
+      </div>
+  
+      <!-- Net Income Section -->
+      <div class="section">
+        <div class="section-title">Net Income</div>
+        <div class="net-income">
+          {{ netIncome | currency }}
+        </div>
+      </div>
+    </div>
+  </div>
+  
