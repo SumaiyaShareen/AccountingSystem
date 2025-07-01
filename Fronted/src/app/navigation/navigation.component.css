@@ -1,0 +1,64 @@
+/* Footer Navbar Container */
+.footer-navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #1e3a8a; /* Indigo tone */
+  padding: 0.8rem 1rem;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.6s ease;
+  z-index: 1000;
+}
+
+/* Navigation Links */
+.footer-navbar nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-navbar nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.footer-navbar nav a:hover {
+  background-color: #3b82f6; /* Light blue on hover */
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Animation for slide up */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .footer-navbar nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer-navbar nav a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Optional: padding bottom for main content to avoid overlap */
+.content {
+  padding-bottom: 70px; /* Height of footer + spacing */
+}
